@@ -1,0 +1,15 @@
+<html>
+    <head>
+	<link rel="stylesheet" href="/static/styles.css">
+      {% if title %}
+      <title>{{ title }} - Map</title>
+      {% else %}
+      <title>Map</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>Microblog: <a href="/index">Home</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>

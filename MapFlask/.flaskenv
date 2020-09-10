@@ -1,0 +1,2 @@
+FLASK_APP=mapapp.py
+FLASK_DEBUG=1

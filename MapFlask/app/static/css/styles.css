@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{
+--color-1: #68b0ab;
+--color-2: #8fc0a9;
+--color-3: #c8d5b9;
+--color-4: #faf3dd;
+--accent-1: #FB959A;
+--accent-2: #E8686E;
+--accent-3: #C33E45;
+--other-1: #FFDB97;
+--other-2: #ECBF6A;
+--other-3: #FFE8BC;
+--font-head: 'Crimson Text';
+--font-body: 'Montserrat';
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-head), serif;
+  font-weight: 700;
+}
+
+
+body {
+  font-family: var(--font-body), sans-serif;}
