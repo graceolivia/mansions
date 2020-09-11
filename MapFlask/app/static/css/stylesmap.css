@@ -25,6 +25,10 @@ border: 1px solid red;
     text-decoration-color: var(--color-2);
 }
 
+.jqoptions {
+  display: none;
+}
+
 body {
   display: grid;
   grid-template-columns: 35% auto;

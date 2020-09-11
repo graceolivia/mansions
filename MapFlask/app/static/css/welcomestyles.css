@@ -17,31 +17,95 @@ main{
   display: flex;
   flex-direction: column;
   height: 100vh;
+
   background-color: var(--color-4);
 }
 
-#titleheader{
+
+
+#titleblock{
   display: block;
-font-size: x-large;
-z-index: 4;
-margin: 100px auto 10px auto;
+z-index: 8;
+
+animation:load_up_title 5s forwards;
+-webkit-animation:load_up_title 5s forwards;
+/* margin: 100px auto 10px auto; */
+position: fixed;
+top: 100000px;
+left: 50px;
+animation-delay: 3s;
+}
+
+#titleheader{
+font-size: 60;
+z-index: 6;
+
 }
 
 
-#frontimage{
-  margin-bottom: 0;
-  margin-top: auto;
-  display: flex;
+.frontimage{
+  position: fixed;
+  bottom:-1000px;
+  left: 0%;
   z-index: 0;
   width: 100%;
   height: auto;
 }
 
-#enter{
-  width: 10vh;
-  margin: auto;
-  background-color: var(--color-4);
-  font-size: large;
-  font-family: var(--font-head), serif;
-  color: var(--color-1);
+#open1{
+  z-index: 10;
+  animation:load_up 1s forwards;
+-webkit-animation:load_up 1s forwards;
+}
+
+#open2{
+  z-index: 9;
+  animation-delay: 1s;
+  animation:load_up 2s forwards;
+-webkit-animation:load_up 2s forwards;
+}
+
+#open3{
+  z-index: 8;
+  animation-delay: 2s;
+  animation:load_up 3s forwards;
+-webkit-animation:load_up 3s forwards;
+}
+
+#open4{
+  z-index: 7;
+  animation-delay: 2s;
+  animation:load_up 4s forwards;
+-webkit-animation:load_up 4s forwards;
+}
+
+#open5{
+  z-index: 6;
+
+  animation:load_up 2s forwards;
+-webkit-animation:load_up 2s forwards;
+animation-delay: 3s;
+}
+
+
+
+@keyframes load_up{
+  from{bottom:-1000px;}
+  to{bottom:0px;}
+}
+
+@-webkit-keyframes load_up{
+  from{bottom:-1000px;}
+  to{bottom:0px;}
+}
+
+
+@keyframes load_up_title{
+  from{top:1000px;}
+  to{top:100px;}
+}
+
+@-webkit-keyframes load_up_title{
+  from{top:1000px;}
+  to{top:100px;}
 }
