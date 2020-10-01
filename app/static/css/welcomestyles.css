@@ -33,15 +33,18 @@ animation:load_up_title 5s forwards;
 position: fixed;
 top: 100000px;
 left: 50px;
-animation-delay: 3s;
+animation-delay: 1s;
 }
 
 #titleheader{
 font-size: 60;
 z-index: 6;
-
+color: var(--accent-3);
 }
 
+#titleheader a:hover, a:visited, a:link, a:active {
+  text-decoration: none;
+}
 
 .frontimage{
   position: fixed;
@@ -84,7 +87,7 @@ z-index: 6;
 
   animation:load_up 2s forwards;
 -webkit-animation:load_up 2s forwards;
-animation-delay: 3s;
+animation-delay: 1s;
 }
 
 
