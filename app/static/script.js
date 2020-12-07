@@ -1,7 +1,7 @@
 
 
 var mymap = L.map('mapid').setView([40.802226, -73.969144], 18);
-
+console.log("HELLO");
 // tiles to map:
 
 L.tileLayer('http://tile.stamen.com/toner/{z}/{x}/{y}.png', {
@@ -27,7 +27,9 @@ var house1Icon = new houseIcon({iconUrl: 'static/symbols/symbol1.png'});
 var house2Icon = new houseIcon({iconUrl: 'static/symbols/symbol2.png'});
 var house3Icon = new houseIcon({iconUrl: 'static/symbols/symbol3.png'});
 
+var markersarray = [house1Icon, house2Icon, house3Icon];
 // mansions
+/*
 var schinasi = L.marker([40.803226, -73.969144], {icon: house1Icon}).addTo(mymap);
 schinasi.bindPopup("Schinasi Mansion.");
 schinasi.on("click", test);
@@ -37,20 +39,33 @@ rivermansion.bindPopup("River Mansion.");
 
 var davis = L.marker([40.801809, -73.970240], {icon: house3Icon}).addTo(mymap);
 davis.bindPopup("Borchardt House.");
+*/
+var mansions = [
+  ["Schinasi Mansion", 40.803226, -73.969144, "A marble behemoth."],
+  ["River Mansion", 40.802216, -73.969998, "Beautiful brick mansion."],
+  ["Borchardt House", 40.801809, -73.970240, "Beaux Arts beauty."],
+]
+var j = 0;
+for (var i=0; i < mansions.length; i++){
+
+  if (j > 2){j = 0;}
+
+  var item = mansions[i];
+  var iconmark = markersarray[j];
+
+  marker = new L.marker([item[1], item[2]], {
+    icon: iconmark
+  }).bindPopup(item[0]).addTo(mymap);
+  marker.on("click", test(item[3]));
+  j++;
+}
 
 
 
-//hide elements
-
-function test(){
+function test(text){
   var u = document.getElementsByClassName('jqoptions');
   var x = u[0];
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  }
-else {
-  x.style.display = "none";
-}
+  x.append(text);
 }
 
 //clicks
