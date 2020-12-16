@@ -8,3 +8,7 @@ def index():
 @app.route('/map')
 def welcome():
     return render_template('mainpage.html')
+
+@app.route('/beauxartsdata')
+def beauxarts():
+    return render_template('beauxarts.geojson')
